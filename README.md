@@ -26,7 +26,7 @@
     DB_HOST=localhost
     ```
 6. config `config/database.yml`
-7. connect `rails app` with `postgres container`
+7. connect `rails app` with `postgres container` (`bin/dev` should work fine)
 8. scaffolding model using `rails generate scaffold Quest name:string status:boolean `
 9. run migration
 10. add `root "quests#index”` into `routes.rb`
