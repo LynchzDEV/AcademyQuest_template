@@ -1,0 +1,14 @@
+<div id="<%= dom_id quest %>" class="bg-white rounded-lg shadow-md p-6 mb-5">
+  <div class="flex items-center justify-between mb-4 border-b pb-4">
+    <h2 class="text-xl font-semibold <%= 'line-through' if quest.status? %>">
+      <%= quest.name %>
+    </h2>
+    <%= status_badge(quest) %>
+  </div>
+
+  <div class="text-gray-700 mt-2">
+    <p class="mb-2"><strong>Created:</strong> <%= format_date(quest.created_at) %></p>
+    <p class="mb-2"><strong>Last updated:</strong> <%= format_date(quest.updated_at) %></p>
+    <p><strong>Status:</strong> <%= quest.status.to_s %></p>
+  </div>
+</div>
